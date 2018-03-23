@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+service AdventureService {
+    rpc AdventurePing (AdventurePingReq) returns (AdventurePingRsp) {
+    }
+    rpc Start (StartReq) returns (StartRsp) {
+    };
+}
+
+message AdventurePingReq {
+}
+
+message AdventurePingRsp {
+}
+
+message StartReq {
+    string token = 1;
+    int32 map_level = 2;
+}
+
+message StartRsp {
+}
